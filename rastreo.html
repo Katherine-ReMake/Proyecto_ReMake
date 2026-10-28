@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReMake - Rastrear Pedido</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🎨 ReMake</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="rastreo.html" class="active">Rastrear Pedido</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="search-card">
+            <h2>Consultar Estado de mi Encargo</h2>
+            <p>Ingresa tu número de documento o código de pedido para conocer el avance.</p>
+
+            <form id="trackingForm">
+                <div class="form-group">
+                    <label for="orderCode">Número de Pedido o Cédula:</label>
+                    <input type="text" id="orderCode" class="form-control" placeholder="Ej: RM-1020" required>
+                </div>
+                <button type="submit" class="btn btn-purple">Consultar Estado</button>
+            </form>
+
+            <div id="trackingResult" class="tracking-result"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 ReMake - Proyecto Formativo SENA ADSO</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

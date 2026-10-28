@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReMake - Catálogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">🎨 ReMake</a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
+            <a href="rastreo.html">Rastrear Pedido</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="section-title">Nuestras Artesanías</h2>
+
+        <div class="catalog-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="img/figura.jpg" alt="Figura Personalizada" class="product-img">
+                <div class="product-info">
+                    <h3>Figura Personalizada</h3>
+                    <p>Hecha a mano en porcelana fría según tus fotos de referencia.</p>
+                    <div class="product-price">$145.000 COP</div>
+                    <button class="btn btn-purple btn-order" data-product="Figura Personalizada">Encargar / Personalizar</button>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="img/amigurumi.jpg" alt="Muñeco Amigurumi" class="product-img">
+                <div class="product-info">
+                    <h3>Muñeco Amigurumi</h3>
+                    <p>Tejido a crochet con hilos hipoalergénicos y colores pastel.</p>
+                    <div class="product-price">$95.000 COP</div>
+                    <button class="btn btn-purple btn-order" data-product="Muñeco Amigurumi">Encargar / Personalizar</button>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="img/cd-pintado.jpg" alt="CD Pintado" class="product-img">
+                <div class="product-info">
+                    <h3>CD pintado</h3>
+                    <p>CD reutilizado con técnica de glass painting.</p>
+                    <div class="product-price">$35.000 COP</div>
+                    <button class="btn btn-purple btn-order" data-product="CD Pintado">Encargar / Personalizar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Interactivo para Personalización -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 id="modalTitle">Personalizar Encargo</h2>
+            <form id="orderForm" style="margin-top: 15px;">
+                <div class="form-group">
+                    <label for="clientName">Tu Nombre Completo:</label>
+                    <input type="text" id="clientName" class="form-control" placeholder="Ej: Sofía López" required>
+                </div>
+                <div class="form-group">
+                    <label for="clientPhone">Teléfono / WhatsApp:</label>
+                    <input type="tel" id="clientPhone" class="form-control" placeholder="Ej: 3001234567" required>
+                </div>
+                <div class="form-group">
+                    <label for="customDetails">Detalles de Personalización (colores, medidas):</label>
+                    <textarea id="customDetails" class="form-control" rows="3" placeholder="Describe los detalles..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="refImage">Foto de Referencia (Opcional):</label>
+                    <input type="file" id="refImage" class="form-control" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-purple">Confirmar y Generar Encargo</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 ReMake - Proyecto Formativo SENA ADSO</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
